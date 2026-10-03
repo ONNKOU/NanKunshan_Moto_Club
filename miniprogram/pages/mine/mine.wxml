@@ -1,0 +1,17 @@
+<view class="container">
+    <view class="user-box">
+        <button class="avatar-btn" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+            <image class="avatar" src="{{}}"/>
+        </button>
+        <input class="nickname" type="nickname" placeholder="设置昵称" bindblur="onNickname" value="{{ nickname }}"/>
+    </view>
+
+    <view class="menu">
+        <view>
+            <text class="menu-item">我的预约（功能暂未开放，敬请期待）</text>
+        </view>
+        <view class="menu-item" bindtap="goAdmin">
+            <text>管理员入口</text>
+        </view>
+    </view>
+</view>

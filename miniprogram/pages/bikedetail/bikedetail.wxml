@@ -1,0 +1,8 @@
+<view class="container">
+    <image class="detail-pic" src="{{ bike.pic }}" mode="widthFix"/>
+    <view class="detail-info">
+        <text class="detail-name">{{ bike.name }}</text>
+        <text class="detail-price">{{ bike.price }}元/天</text>
+        <text class="detail-DX">{{ bike.details_text}}</text>
+    </view>
+</view>

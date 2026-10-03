@@ -1,0 +1,36 @@
+<view class="container">
+    <view class="form-item">
+        <text class="label">新增车辆名称</text>
+        <input class="input" placeholder="请输入名称" bindinput="onName" />
+    </view>
+
+    <view class="form-item">
+        <text class="label">租赁价格（/天）</text>
+        <input class="input" placeholder="请输入价格" type="number" bindinput="onPrice" />
+    </view>
+
+    <view class="form-item">
+        <text class="label">详情页描述</text>
+        <input class="input" placeholder="编辑车辆详情信息" type="number" bindinput="onDetails_text" />
+    </view>
+
+    <view class="form-item">
+        <button bindtap="chooseImg">选择车辆照片</button>
+        <image wx:if="{{ imgUrl }}" src="{{ imgUrl }}" class="preview" mode="aspectFill" />
+    </view>
+
+    <button type="default" bindtap="submit">提交</button>
+
+</view>
+    
+<text>编辑车辆</text>
+<view wx:for="{{ bikes }}" wx:key="_id" class="BJ-item">
+    <text class="itemtext">{{ item.name }}</text>
+    <button size="mini" type="warn" bindtap="delBike" data-id="{{ item._id }}">删除</button>
+</view>
+
+<view class="back-bar" bindtap="goHome">
+    <text>← 返回首页</text>
+</view>
+    
+

@@ -1,0 +1,53 @@
+<view>
+  <swiper class="H_photo" indicator-dots autoplay indicator-active-color="#ff6a00" indicator-color="#fff" interval="3000" circular>
+    <swiper-item  wx:for="{{ photos }}" wx:key="*this">
+      <image class="H_image" src="{{ item }}" mode="aspectFill"/>
+    </swiper-item>
+  </swiper>
+
+  <image class="logo" src="{{ club_logo }}" mode="widthFix"/>
+
+  <view class="section">
+      <text class="title">核心服务</text>
+      <view class="feature">
+          <text class="feature-name">摩托车、自行车租赁</text>
+          <text class="feature-desc">多款车型可选，日租灵活</text>
+      </view>
+      <view class="feature">
+          <text class="feature-name">装备出售</text>
+          <text class="feature-desc">头盔、骑行服、各类护具装备齐全</text>
+      </view>
+      <view class="feature">
+          <text class="feature-name">门店二楼机车茶餐厅</text>
+          <text class="feature-desc">专属于车友的休息站，提供热水、各类茶饮、西餐轻食</text>
+      </view>
+      <view class="feature">
+          <text class="feature-name">摩友聚会</text>
+          <text class="feature-desc">定期活动，结识同好</text>
+      </view>
+  </view>
+  <view class="section">
+    <text class="title">海报展示</text>
+    <swiper class="H_poster" indicator-dots autoplay indicator-active-color="#ff6a00" indicator-color="#fff" interval="3000" circular>
+      <swiper-item  wx:for="{{ poster }}" wx:key="*this">
+        <image class="poster_image" src="{{ item }}" mode="" bind:tap="clickshow_poster" data-src="{{ item }}" />
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="section">
+        <text class="title">门店地址</text>
+        <text class="desc">广东省惠州市龙门县永南路52号</text>
+        <map 
+          class="map"
+          latitude="23.576088"
+          longitude="113.970765"
+          scale="18"
+          markers="{{ markers }}"
+        />
+        <button class="nav-btn" bindtap="openMap">点此导航</button>
+        <text class="title" style="margin-top: 30rpx;">联系方式</text>
+        <text class="desc" bindtap="callPhone">电话：13928769108 杨先生 （可点击呼叫）</text>
+        <text class="desc">微信：同手机号</text>
+    </view>
+</view>

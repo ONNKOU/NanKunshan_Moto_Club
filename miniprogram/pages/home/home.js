@@ -1,0 +1,49 @@
+Page({
+  data: {
+    photos:[
+      'cloud://moto-club-d1guy17qhab5acc6b.6d6f-moto-club-d1guy17qhab5acc6b-1499253637/home_photos/01.jpg'
+    ],
+    
+    club_logo:'cloud://moto-club-d1guy17qhab5acc6b.6d6f-moto-club-d1guy17qhab5acc6b-1499253637/home_photos/club_logo.jpg',
+
+    poster:[
+      'cloud://moto-club-d1guy17qhab5acc6b.6d6f-moto-club-d1guy17qhab5acc6b-1499253637/home_poster/04.jpg',
+      'cloud://moto-club-d1guy17qhab5acc6b.6d6f-moto-club-d1guy17qhab5acc6b-1499253637/home_poster/01.jpg',
+      'cloud://moto-club-d1guy17qhab5acc6b.6d6f-moto-club-d1guy17qhab5acc6b-1499253637/home_poster/02.jpg',
+      'cloud://moto-club-d1guy17qhab5acc6b.6d6f-moto-club-d1guy17qhab5acc6b-1499253637/home_poster/03.jpg'
+    ],
+
+    markers: [{
+      id: 1,
+      latitude:23.576088,
+      longitude:113.970765,
+      name: '南昆山永汉河机车俱乐部',
+      width: 30,
+      height: 30
+    }]
+  },
+
+  clickshow_poster(e){
+    wx.previewImage({
+      current:e.currentTarget.dataset.src,
+      urls: this.data.poster
+    })
+  },
+
+  openMap() {
+    wx.openLocation({
+        latitude:23.576088,
+        longitude:113.970765,
+        name: '南昆山永汉河机车俱乐部',
+        address: '广东省惠州市龙门县永汉河',
+        scale: 18
+    })
+  },
+
+  callPhone() {
+    wx.makePhoneCall({
+        phoneNumber: '13928769108'
+    })
+  }
+
+})

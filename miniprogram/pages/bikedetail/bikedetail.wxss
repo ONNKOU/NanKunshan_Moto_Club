@@ -1,0 +1,28 @@
+.container { padding: 20rpx; }
+
+.detail-pic {
+    width: 100%;
+    border-radius: 12rpx;
+}
+
+.detail-info {
+    margin-top: 40rpx;
+}
+
+.detail-name {
+    font-size: 40rpx;
+    font-weight: bold;
+    display: block;
+}
+
+.detail-price {
+    font-size: 34rpx;
+    color: #e60012;
+    margin-top: 16rpx;
+    display: block;
+}
+
+.detail-DX {
+  margin-top: 16rpx;
+  display: block;
+}

@@ -1,0 +1,89 @@
+.H_photo {
+  width: 100%;
+  height: 400rpx;
+}
+
+.H_image{
+  width: 100%;
+}
+
+/* logo */
+.logo{
+  width: 200rpx;
+  display: block;
+  margin: 20rpx auto;
+  clip-path: inset(0 0 2rpx 0);
+}
+
+/* 核心服务 */
+.section {
+  padding: 0 30rpx;
+  margin-bottom: 40rpx;
+}
+
+.title {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffb459, #ff6a00);
+  color: #000;
+  font-size: 30rpx;
+  font-weight: bold;
+  padding: 10rpx 28rpx;
+  margin-bottom: 20rpx;
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 88% 100%, 0 100%);
+}
+
+.feature {
+  background: #f7f7f7;
+  border-radius: 12rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+}
+
+.feature-name {
+  font-size: 30rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.feature-desc {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.H_poster {
+  width: 100%;
+  height: 800rpx;
+}
+
+.H_poster swiper-item {
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+
+.poster_image {
+    width: 100%;
+    height: 100%;
+    border-radius: 24rpx;
+}
+
+.desc {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.8;
+  display: block;
+}
+
+.map {
+  width: 100%;
+  height: 400rpx;
+  border-radius: 12rpx;
+  margin-top: 20rpx;
+}
+.nav-btn {
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  color: #333;
+  border: 1rpx solid #ddd;
+}
+

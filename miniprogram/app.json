@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/admin/admin",
+    "pages/home/home",
+    
+    "pages/bikes/bikes",
+    "pages/mine/mine",
+    "pages/bikedetail/bikedetail"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "南昆山永汉河机车俱乐部",
+    "navigationBarTextStyle": "black"
+  },
+
+  "tabBar": {
+    "list": [
+      { 
+      "pagePath": "pages/home/home",
+      "text": "主页" ,
+      "iconPath": "/images/tabbar-images/home-02.png",
+      "selectedIconPath": "/images/tabbar-images/home-01.png"
+      },
+      {
+      "pagePath": "pages/bikes/bikes",
+      "text": "机车",
+      "iconPath": "/images/tabbar-images/moto-02.png",
+      "selectedIconPath": "/images/tabbar-images/moto-01.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/tabbar-images/mine-02.png",
+        "selectedIconPath": "/images/tabbar-images/mine-01.png"
+      }
+    ]
+  },
+
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents"
+}
