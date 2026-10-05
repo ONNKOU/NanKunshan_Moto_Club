@@ -55,10 +55,14 @@ Page({
 
   delBike(e) {
     const id = e.currentTarget.dataset.id
-    wx.cloud.database().collection('bikes').doc(id).remove().then(() => {
+    wx.cloud.callFunction({
+        name: 'deleteBike',
+        data: { id }
+    }).then(() => {
         wx.showToast({ title: '删除成功' })
         this.onShow()
     })
+    
   },
 
   goHome() {

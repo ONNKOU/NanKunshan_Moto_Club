@@ -8,6 +8,13 @@ Page({
     const avatarUrl = wx.getStorageSync('avatarUrl') || ''
     const nickname = wx.getStorageSync('nickname') || ''
     this.setData({ avatarUrl, nickname })
+
+    wx.cloud.callFunction({
+      name: 'getOpenid'
+    }).then(res => {
+      console.log('openid:', res.result.openid)
+      wx.setStorageSync('openid', res.result.openid)
+    })
   },
 
   onChooseAvatar(e) {
@@ -29,7 +36,7 @@ Page({
         placeholderText: '请输入管理员密码',
         success: (res) => {
             if (res.confirm) {
-                if (res.content === '261003') {
+                if (res.content === '26103') {
                     wx.navigateTo({ url: '/pages/admin/admin' })
                 } else {
                     wx.showToast({ title: '密码错误', icon: 'none' })

@@ -1,3 +1,8 @@
+<view class="bikeTitle">
+  <image class="bikeTitleIMG" src="cloud://moto-club-d1guy17qhab5acc6b.6d6f-moto-club-d1guy17qhab5acc6b-1499253637/home_photos/bicks_title.png" mode="widthFix"/>
+</view>
+
+
 <view class="container">
     <view class="bike-item" bindtap="goDetail" wx:for="{{ bikes }}" wx:key="_id" data-id="{{ item._id }}">
         <image class="bike-pic" src="{{ item.pic }}" mode="aspectFill"/>
