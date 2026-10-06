@@ -1,4 +1,5 @@
 <view class="container">
+    <!-- 功能1：首页轮播图增删  -->
     <text class="label">首页轮播图</text>
 
     <button bindtap="uploadBanner">上传新图</button>
@@ -7,6 +8,16 @@
         <view class="banner-item" wx:for="{{ banners }}" wx:key="_id">
             <image src="{{ item.fileID }}" mode="aspectFill" class="banner-thumb"/>
             <button size="mini" bindtap="delBanner" data-id="{{ item._id }}" data-file="{{ item.fileID }}">删除</button>
+        </view>
+    </view>
+
+    <!-- 功能2：首页海报图增删  -->
+    <text class="label">首页海报图</text>
+    <button bindtap="uploadPoster">上传新图</button>
+    <view class="poster-list">
+        <view class="poster-item" wx:for="{{ poster }}" wx:key="_id">
+            <image src="{{ item.fileID }}" mode="aspectFill" class="poster-thumb"/>
+            <button size="mini" bindtap="delPoster" data-id="{{ item._id }}" data-file="{{ item.fileID }}">删除</button>
         </view>
     </view>
 </view>

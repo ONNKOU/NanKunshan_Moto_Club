@@ -4,12 +4,7 @@ Page({
     
     club_logo:'cloud://moto-club-d1guy17qhab5acc6b.6d6f-moto-club-d1guy17qhab5acc6b-1499253637/home_photos/club_logo.jpg',
 
-    poster:[
-      'cloud://moto-club-d1guy17qhab5acc6b.6d6f-moto-club-d1guy17qhab5acc6b-1499253637/home_poster/04.jpg',
-      'cloud://moto-club-d1guy17qhab5acc6b.6d6f-moto-club-d1guy17qhab5acc6b-1499253637/home_poster/01.jpg',
-      'cloud://moto-club-d1guy17qhab5acc6b.6d6f-moto-club-d1guy17qhab5acc6b-1499253637/home_poster/02.jpg',
-      'cloud://moto-club-d1guy17qhab5acc6b.6d6f-moto-club-d1guy17qhab5acc6b-1499253637/home_poster/03.jpg'
-    ],
+    poster:[],
 
     markers: [{
       id: 1,
@@ -24,6 +19,11 @@ Page({
     wx.cloud.database().collection('JH_Banner').get().then(res => {
       this.setData({
           banners: res.data.map(item => item.fileID)
+      })
+    }),
+    wx.cloud.database().collection('JH_Poster').get().then(res => {
+      this.setData({
+          poster: res.data.map(item => item.fileID)
       })
     })
   },
