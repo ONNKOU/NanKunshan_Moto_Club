@@ -1,0 +1,4 @@
+<view>
+  <button class="BT"  bind:tap="GoAdmin">机车页数据编辑</button>
+  <button class="BT"  bind:tap="GoAdminHome">主页数据编辑</button>
+</view>

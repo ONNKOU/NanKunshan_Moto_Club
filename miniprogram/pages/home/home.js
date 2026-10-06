@@ -1,8 +1,6 @@
 Page({
   data: {
-    photos:[
-      'cloud://moto-club-d1guy17qhab5acc6b.6d6f-moto-club-d1guy17qhab5acc6b-1499253637/home_photos/01.jpg'
-    ],
+    banners: [],
     
     club_logo:'cloud://moto-club-d1guy17qhab5acc6b.6d6f-moto-club-d1guy17qhab5acc6b-1499253637/home_photos/club_logo.jpg',
 
@@ -22,6 +20,14 @@ Page({
       height: 30
     }]
   },
+  onShow(){
+    wx.cloud.database().collection('JH_Banner').get().then(res => {
+      this.setData({
+          banners: res.data.map(item => item.fileID)
+      })
+    })
+  },
+  
 
   clickshow_poster(e){
     wx.previewImage({

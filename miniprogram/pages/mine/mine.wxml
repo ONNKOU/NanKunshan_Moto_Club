@@ -7,11 +7,15 @@
     </view>
 
     <view class="menu">
-        <view>
-            <text class="menu-item">我的预约（功能暂未开放，敬请期待）</text>
+
+        <view class="menu-item" bindtap="">
+            <text>我的预约（功能暂未开放）</text>
         </view>
-        <view class="menu-item" bindtap="goAdmin">
+
+        <view class="menu-item" bindtap="goEntrance">
             <text>管理员入口</text>
         </view>
+
     </view>
+
 </view>

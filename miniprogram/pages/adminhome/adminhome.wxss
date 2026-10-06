@@ -1,0 +1,23 @@
+.container { padding: 40rpx; }
+
+.label {
+    font-size: 30rpx;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20rpx;
+}
+
+.banner-list { margin-top: 30rpx; }
+
+.banner-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20rpx;
+    gap: 20rpx;
+}
+
+.banner-thumb {
+    width: 200rpx;
+    height: 120rpx;
+    border-radius: 8rpx;
+}

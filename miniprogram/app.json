@@ -4,7 +4,9 @@
     "pages/admin/admin",
     "pages/bikes/bikes",
     "pages/mine/mine",
-    "pages/bikedetail/bikedetail"
+    "pages/bikedetail/bikedetail",
+    "pages/adminhome/adminhome",
+    "pages/entrance/entrance"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

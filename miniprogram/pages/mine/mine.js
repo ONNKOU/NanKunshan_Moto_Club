@@ -29,20 +29,7 @@ Page({
     wx.setStorageSync('nickname', nickname)
   },
 
-  goAdmin() {
-    wx.showModal({
-        title: '管理员验证',
-        editable: true,
-        placeholderText: '请输入管理员密码',
-        success: (res) => {
-            if (res.confirm) {
-                if (res.content === '26103') {
-                    wx.navigateTo({ url: '/pages/admin/admin' })
-                } else {
-                    wx.showToast({ title: '密码错误', icon: 'none' })
-                }
-            }
-        }
-    })
-}
+  goEntrance() {
+    wx.navigateTo({ url: '/pages/entrance/entrance' })
+  }
 })

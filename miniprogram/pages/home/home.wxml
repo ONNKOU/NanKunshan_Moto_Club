@@ -1,7 +1,7 @@
 <view>
   <swiper class="H_photo" indicator-dots autoplay indicator-active-color="#ff6a00" indicator-color="#fff" interval="3000" circular>
-    <swiper-item  wx:for="{{ photos }}" wx:key="*this">
-      <image class="H_image" src="{{ item }}" mode="aspectFill"/>
+    <swiper-item wx:for="{{ banners }}" wx:key="*this">
+        <image class="H_image" src="{{ item }}" mode="aspectFill"/>
     </swiper-item>
   </swiper>
 

@@ -1,0 +1,12 @@
+<view class="container">
+    <text class="label">首页轮播图</text>
+
+    <button bindtap="uploadBanner">上传新图</button>
+
+    <view class="banner-list">
+        <view class="banner-item" wx:for="{{ banners }}" wx:key="_id">
+            <image src="{{ item.fileID }}" mode="aspectFill" class="banner-thumb"/>
+            <button size="mini" bindtap="delBanner" data-id="{{ item._id }}" data-file="{{ item.fileID }}">删除</button>
+        </view>
+    </view>
+</view>
